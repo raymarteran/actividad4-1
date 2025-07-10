@@ -37,5 +37,3 @@
 	<li>En el momento en que se instale correctamente <i>npm</i> podemos iniciar la app con Reactjs con el comando <i><b>$ npm start</b></i> con el cual llamará a <i>react-scripts start</i> y comenzará a correr la aplicación,</li>
 	<li> Por último este automáticamente abrirá tu navegador, pero si no es así dirigite a él y escribe en la URL <b><i>http://localhost:3000/</i></b>.</li>
 </ol>
-
-<h2>FIN</h2>
