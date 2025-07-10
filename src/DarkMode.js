@@ -2,7 +2,6 @@ import ImgLightmode from './media/lightmode.png'
 import ImgDarkmode from './media/darkmode.png'
 
 export function ButtonMode() {
-    // console.log('cambiando modo');
     return <>
         <button className="switchButton darkModeButton" onClick={DarkMode}>
             <span className="switchSlider">

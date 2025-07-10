@@ -59,6 +59,7 @@ input[type="text"]:focus {
   text-align: center;
   width: fit-content;
   align-items: center;
+  width: 100%;
 }
 
 #loader {
@@ -149,7 +150,6 @@ input[type="text"]:focus {
 }
 .user .text {
   margin-bottom: 15px;
-  text-align: left;
 }
 .user .otherData {
   display: flex;
@@ -242,4 +242,31 @@ body.darkMode {
 }
 .darkMode #loader.loading div {
   border-color: #fff transparent transparent transparent;
+}
+.link {
+  color: #2b2b2b;
+  font-weight: bold;
+}
+.darkMode .link {
+  color: #fff;
+}
+
+.text-r {
+  display: flex;
+  flex-direction: row;
+  align-items: right;
+  justify-content: right;
+  text-align: right;
+  margin-top: 1.5rem;
+}
+
+.textTitle {
+  font-size: 1.2rem;
+  color: #2b2b2b;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.darkMode .textTitle {
+  color: #fff;
 }

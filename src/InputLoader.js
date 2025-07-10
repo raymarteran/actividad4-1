@@ -36,6 +36,10 @@ export function Busqueda() {
   // Se encarga de hacer render del la barra del buscador
   return (
     <div className="centerItems">
+      <p className="textTitle">
+        Buscador de usuarios de GitHub, puedes buscar a un usuario dentro de github
+        solo con escribir su nombre de usuario:
+      </p>
       <input
         type="text"
         value={inputValue}
@@ -51,12 +55,13 @@ export function Busqueda() {
           <div></div>
         </div>
       ) : (
-        <div></div>
+        inputValue && (
+          <div id="users">
+            <RenderUsers resultados={userResults} />
+          </div>
+        )
       )}
-      <div id="users">
-        <RenderUsers resultados={userResults} />{" "}
-        {/* Pasa los resultados de la búsqueda como prop a RenderUsers */}
-      </div>
+     
     </div>
   );
 }

@@ -1,17 +1,12 @@
 
 export function RenderUsers({resultados}) { //recibimos el array de resultados provenientes de InputLoader.js
-    // console.log('en reder');
-    console.log(resultados); //los vemos por consola
     if (!resultados) { //si no hay resultados
-        console.log('no resultados');
         return <>No se proporcionaron resultados.</>; //empleamos fragmentos
     }
     return (
         <>
             {resultados.length > 0 ? ( //numero de argumentos que contiene resultados
                 resultados.map((user) => (  //funcion map un método usado para iterar a traves de los elementos de resultados
-                    console.log('si resultados'),
-                    // console.log('dentro',user.login),
                 <div key={user.id} className="user">
                     <h2>{user.login}</h2>
                     <div className="image">
@@ -36,10 +31,17 @@ export function RenderUsers({resultados}) { //recibimos el array de resultados p
                             </p>
                         </div>
                     </div>
+                    <div className="userData text-r">
+                        <p className="text">
+                            <a href={user.html_url} className="link" target="_blank" rel="noopener noreferrer">
+                                Ir a perfil
+                            </a>
+                        </p>
+                    </div>
                 </div>
                 ))
             ) : (
-                <p className="nonExist"> No existen usuarios con el valor que ingresaste </p>
+                <p className="nonExist"> No existen usuarios que coincidan con su búsqueda.</p>
             )}
         </>
     ); 
