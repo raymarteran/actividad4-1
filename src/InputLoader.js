@@ -10,10 +10,10 @@ export function Busqueda() {
 
   // Usamos useEffect para obtener los datos de la API y actualizar los componentes
   useEffect(() => {
-    handleChange();
     const timer = setTimeout(() => {
+      handleChange();
       setLoading(false);
-    }, 1000);
+    }, 800);
 
     return () => {
       clearTimeout(timer);
